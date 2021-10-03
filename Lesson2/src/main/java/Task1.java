@@ -15,12 +15,12 @@ public class Task1 {
         System.out.println(calculateHypotenuse(3, 4));
     }
 
-    public static long sum(long a, long b) {
-        long result = a + b;
-        if (result > Integer.MAX_VALUE){     //не придумал другого способа борьбы с арифметическим переполнением int для выполнения доп. условия, кроме как изменить условие задачи.. нужна подсказка.
+    public static int sum(int a, int b) {
+        long result = (long) a + b;
+        if (result > Integer.MAX_VALUE) {
             return -1;
         }
-        return result;
+        return a+b;
     }
 
     public static int max(int a, int b) {
