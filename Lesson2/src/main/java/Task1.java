@@ -20,7 +20,7 @@ public class Task1 {
         if (result > Integer.MAX_VALUE) {
             return -1;
         }
-        return a+b;
+        return a + b;
     }
 
     public static int max(int a, int b) {
