@@ -12,27 +12,20 @@ public class Task4 {
      * count - количество программистов
      */
     public static void main(String[] args) {
-        countDevs(19);
+        countDevs(2);
     }
 
     public static void countDevs(int count) {
-        if (count <= 20) {
-            if (count == 1) {
+        if (count % 100 >= 11 && count % 100 <= 19) {
+            System.out.println(count + " программистов");
+        } else {
+            if (count % 10 == 1) {
                 System.out.println(count + " программист");
-            } else if (count >= 2 && count <= 4) {
+            } else if (count % 10 >= 2 && count % 10 <= 4) {
                 System.out.println(count + " программиста");
             } else {
                 System.out.println(count + " программистов");
             }
-        } else if (count % 100 >= 11 && count % 100 <= 14) {
-            System.out.println(count + " программистов");
-        } else {
-            if (count % 10 == 1)
-                System.out.println(count + " программист");
-            if (count % 10 >= 2 && count % 10 <= 4)
-                System.out.println(count + " программиста");
-            if ((count % 10 >= 5 && count % 10 <= 19) || count == 0)
-                System.out.println(count + " программистов");
         }
     }
 }
