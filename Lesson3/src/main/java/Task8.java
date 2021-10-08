@@ -21,8 +21,9 @@ public class Task8 {
                     break;
                 }
             }
-            if (prime)
+            if (prime) {
                 System.out.print(i + " ");
+            }
         }
     }
 }
