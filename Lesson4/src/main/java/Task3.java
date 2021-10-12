@@ -27,7 +27,7 @@ public class Task3 {
                 if (j >= (array[i].length - i - 1)) {
                     array[i][j] = '*';
                 }
-                System.out.print(array[i][j] + "\t");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
@@ -37,7 +37,7 @@ public class Task3 {
                 if (i >= j) {
                     array[i][j] = '*';
                 }
-                System.out.print(array[i][j] + "\t");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
@@ -48,7 +48,7 @@ public class Task3 {
                 if (i <= j) {
                     array[i][j] = '*';
                 }
-                System.out.print(array[i][j] + "\t");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
@@ -58,7 +58,7 @@ public class Task3 {
                 if (j >= (array[i].length - i)) {
                     array[i][j] = ' ';
                 }
-                System.out.print(array[i][j] + "\t");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }

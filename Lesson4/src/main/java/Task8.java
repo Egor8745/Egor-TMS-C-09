@@ -14,13 +14,14 @@ public class Task8 {
             }
         }
         replacement(mass, 0, indexMax);
+        System.out.println(Arrays.toString(mass));
     }
 
-    public static void replacement(int[] arr, int i, int j) {
+    public static int[] replacement(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
-        System.out.println(Arrays.toString(arr));
+        return arr;
     }
 }
 
