@@ -7,9 +7,9 @@ import java.util.Scanner;
  * Created by Егор on 12.10.2021.
  */
 public class Computer {
-    private int CPU;
-    private int RAM;
-    private int HDD;
+    private int cpu;
+    private int ram;
+    private int hdd;
     private int resource;
     Random random = new Random();
     boolean burned;
@@ -17,23 +17,23 @@ public class Computer {
     @Override
     public String toString() {
         return "Computer{" +
-                "CPU=" + CPU +
-                ", RAM=" + RAM +
-                ", HDD=" + HDD +
+                "CPU=" + cpu +
+                ", RAM=" + ram +
+                ", HDD=" + hdd +
                 ", resource=" + resource +
                 '}';
     }
 
-    public void setCPU(int CPU) {
-        this.CPU = CPU;
+    public void setCpu(int cpu) {
+        this.cpu = cpu;
     }
 
-    public void setRAM(int RAM) {
-        this.RAM = RAM;
+    public void setRam(int ram) {
+        this.ram = ram;
     }
 
-    public void setHDD(int HDD) {
-        this.HDD = HDD;
+    public void setHdd(int hdd) {
+        this.hdd = hdd;
     }
 
     public void setResource(int resource) {
@@ -42,7 +42,7 @@ public class Computer {
 
     public void computerOn() {
         int a = random.nextInt(2);
-        if (a == random()) {
+        if (a == getRandomValue()) {
             System.out.println("Компьютер включился!");
         } else {
             System.out.println("Компьютер сгорел!");
@@ -57,7 +57,7 @@ public class Computer {
             System.out.println("Компьютер не может включиться, т.к. он сгорел!");
         }
         int b = random.nextInt(2);
-        if (b == random()) {
+        if (b == getRandomValue()) {
             System.out.println("Компьютер выключился!");
         } else {
             System.out.println("Компьютер сгорел!");
@@ -65,7 +65,7 @@ public class Computer {
         computerOn();
     }
 
-    public int random() {
+    public int getRandomValue() {
         Scanner scanner = new Scanner(System.in);
         int value;
         do {
