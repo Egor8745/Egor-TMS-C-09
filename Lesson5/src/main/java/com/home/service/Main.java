@@ -8,9 +8,9 @@ import com.home.model.Computer;
 public class Main {
     public static void main(String[] args) {
         Computer computer = new Computer();
-        computer.setCPU(6);
-        computer.setRAM(8);
-        computer.setHDD(500);
+        computer.setCpu(6);
+        computer.setRam(8);
+        computer.setHdd(500);
         computer.setResource(5);
         System.out.println(computer);
         computer.computerOn();
