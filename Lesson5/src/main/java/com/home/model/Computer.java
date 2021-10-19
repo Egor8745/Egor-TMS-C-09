@@ -11,8 +11,8 @@ public class Computer {
     private int ram;
     private int hdd;
     private int resource;
-    Random random = new Random();
-    boolean burned;
+    private Random random = new Random();
+    private boolean burned;
 
     @Override
     public String toString() {
