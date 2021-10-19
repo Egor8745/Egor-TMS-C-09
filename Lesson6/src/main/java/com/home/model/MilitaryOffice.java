@@ -1,42 +1,56 @@
 package com.home.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Егор on 17.10.2021.
  */
 public class MilitaryOffice {
     private PersonRegistry registry;
-    ArrayList<Person> fitForServiceMan = new ArrayList<>();
+    private ArrayList<Person> fitForServiceMan = new ArrayList<>();
+    private ArrayList<Person> сonscriptsCityOfMinsk = new ArrayList<>();
+    private ArrayList<Person> recruitsByAge = new ArrayList<>();
+    private ArrayList<Person> recruitsByName = new ArrayList<>();
 
     public MilitaryOffice(PersonRegistry registry) {
         this.registry = registry;
     }
 
-    public void fitForService() {
+    public List searchFitForService() {
         for (Person num : registry.getList()) {
             if (num.getAge() >= 18 && num.getAge() <= 27) {
                 fitForServiceMan.add(num);
             }
         }
-        System.out.println("Призывники города Минска: ");
-        for (Person num : fitForServiceMan) {
+        return fitForServiceMan;
+    }
+
+    public List searchСonscriptsCityOfMinsk() {
+        for (Person num : registry.getList()) {
             if (num.getAdress().equals("Минск")) {
-                System.out.println(num);
+                сonscriptsCityOfMinsk.add(num);
             }
         }
-        System.out.println("Призывники от 25 до 27 лет: ");
-        for (Person num : fitForServiceMan) {
+        return сonscriptsCityOfMinsk;
+    }
+
+    public List searchRecruitsByAge() {
+        for (Person num : registry.getList()) {
             if (num.getAge() >= 25 && num.getAge() <= 27) {
-                System.out.println(num);
+                recruitsByAge.add(num);
             }
         }
-        System.out.println("Призывники с именем Александр: ");
-        for (Person num : fitForServiceMan) {
+        return recruitsByAge;
+    }
+
+    public List searchRecruitsByName() {
+        for (Person num : registry.getList()) {
             if (num.getName().equals("Александр")) {
-                System.out.println(num);
+                recruitsByName.add(num);
             }
         }
+        return recruitsByName;
     }
 }
 
