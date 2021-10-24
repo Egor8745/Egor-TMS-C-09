@@ -12,16 +12,12 @@ public class Engine {
         this.volume = volume;
     }
 
-    public boolean engineOn() {
+    public void startEngine() {
         System.out.println("Двигатель запущен");
-        boolean flag = true;
-        return flag;
     }
 
-    public boolean engineOff() {
+    public void stopEngine() {
         System.out.println("Двигатель заглушен");
-        boolean flag = false;
-        return flag;
     }
 
     @Override
