@@ -1,4 +1,4 @@
-package com.home.transport.landTransport;
+package com.home.transport.land_transport;
 
 import lombok.experimental.SuperBuilder;
 
@@ -22,10 +22,6 @@ public class Truck extends Land {
     }
 
     public void capacityTruck(int cargo) {
-        if (cargo <= liftingCapacity) {
-            System.out.println("Грузовик загружен.");
-        } else {
-            System.out.println("Вам нужен грузовик побольше.");
-        }
+        System.out.println(liftingCapacity <= cargo ? "Грузовик загружен." : "Вам нужен грузовик побольше.");
     }
 }

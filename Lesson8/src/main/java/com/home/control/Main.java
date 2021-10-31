@@ -1,9 +1,9 @@
 package com.home.control;
 
-import com.home.transport.airTransport.Civil;
-import com.home.transport.airTransport.Military;
-import com.home.transport.landTransport.Passenger;
-import com.home.transport.landTransport.Truck;
+import com.home.transport.air_transport.Civil;
+import com.home.transport.air_transport.Military;
+import com.home.transport.land_transport.Passenger;
+import com.home.transport.land_transport.Truck;
 
 /**
  * Created by Егор on 28.10.2021.

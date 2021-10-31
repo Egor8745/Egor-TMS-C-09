@@ -1,4 +1,4 @@
-package com.home.transport.landTransport;
+package com.home.transport.land_transport;
 
 import lombok.experimental.SuperBuilder;
 
@@ -32,7 +32,6 @@ public class Passenger extends Land {
     }
 
     private double calculationFuel(double rote) {
-        double fuel = rote / getConsumptionFuel();
-        return fuel;
+        return (rote / 100) * getConsumptionFuel();
     }
 }
