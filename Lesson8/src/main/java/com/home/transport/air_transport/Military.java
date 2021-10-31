@@ -1,4 +1,4 @@
-package com.home.transport.airTransport;
+package com.home.transport.air_transport;
 
 import lombok.experimental.SuperBuilder;
 
@@ -25,6 +25,7 @@ public class Military extends Air {
 
     public void attackMissiles() {
         if (missilesOnBoard > 0) {
+            missilesOnBoard--;
             System.out.println("Ракета пошла...");
         } else {
             System.out.println("Боеприпасы отсутствуют.");
@@ -34,6 +35,7 @@ public class Military extends Air {
     public void ejectionSystem() {
         if (ejection) {
             System.out.println("Катапультирование прошло успешно.");
+            ejection = false;
         } else {
             System.out.println("У вас нет такой системы.");
         }

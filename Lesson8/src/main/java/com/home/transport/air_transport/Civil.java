@@ -1,4 +1,4 @@
-package com.home.transport.airTransport;
+package com.home.transport.air_transport;
 
 
 import lombok.experimental.SuperBuilder;
@@ -25,10 +25,6 @@ public class Civil extends Air {
     }
 
     public void passengerCapacity(int passengers) {
-        if (passengers <= passengersNumber) {
-            System.out.println("Самолет загружен.");
-        } else {
-            System.out.println("Нужен самолет побольше.");
-        }
+        System.out.println(passengersNumber >= passengers ? "Самолет загружен." : "Нужен самолет побольше.");
     }
 }
