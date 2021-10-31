@@ -58,6 +58,8 @@ public class Robot implements IRobot {
      *
      * @return int
      */
+
+
     @Override
     public int getPrice() {
         int price = head.getPrice() + hand.getPrice() + leg.getPrice();
