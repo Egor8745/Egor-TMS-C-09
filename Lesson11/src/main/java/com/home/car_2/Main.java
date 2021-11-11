@@ -8,12 +8,11 @@ import com.home.car_2.utils.CarIsNotStart;
 public class Main {
     public static void main(String[] args) {
         Car car = new Car("BMW", 300, 10000);
-        Car car1 = new Car("бмв", 220, 23000);
+        Car car1 = new Car("Opel", 120, 3000);
         Car car2 = new Car("мерс", 220, 23000);
-        Car car3 = new Car("жигули", 120, 1500);
-        Car car4 = new Car();
-        car4.setPrice(-5);
-        Car[] start = {car, car1, car2, car3, car4};
+        Car car3 = new Car();
+        car3.setPrice(-5);
+        Car[] start = {car, car1, car2, car3};
 
         try {
             method(start);
