@@ -4,7 +4,6 @@ package com.home.text;
 /**
  * Created by Егор on 11.11.2021.
  */
-
 public class TextFormatterImpl implements TexstServise {
 
     @Override
