@@ -1,5 +1,6 @@
 package com.home.streams;
 
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -20,9 +21,8 @@ public class TextFormatter {
     }
 
     public static String formatText(String text) {
-        String[] sentences = text.split("[!.?]\\s*");
         ArrayList<String> arr = new ArrayList<>();
-        for (String sentence : sentences) {
+        for (String sentence : sentences(text)) {
             int count = getWordsArray(sentence).length;
             if (count >= 3 && count <= 5 || checkPalindromeInSentence(sentence)) {
                 arr.add(sentence);
@@ -32,11 +32,10 @@ public class TextFormatter {
     }
 
     public static void checkCensor(String text, String text2) {
-        String[] sentences = text.split("[!.?]\\s*");
         int count = 0;
         boolean var = false;
-        for (String sentence : sentences) {
-            if (sentence.contains(Objects.requireNonNull(censorWords(text2)))) {
+        for (String sentence : sentences(String.valueOf(text))) {
+            if (sentence.contains(Objects.requireNonNull(censorWords(String.valueOf(text2))))) {
                 count++;
                 var = true;
                 System.out.println(sentence);
@@ -50,7 +49,7 @@ public class TextFormatter {
     }
 
     public static String censorWords(String text) {
-        String[] words = text.split("\\s+");
+        String[] words = text.split("[,\\s]+");
         for (String word : words) {
             return word;
         }
@@ -72,5 +71,9 @@ public class TextFormatter {
 
     private static boolean isWordPalindrome(String word) {
         return word.equalsIgnoreCase(new StringBuilder(word).reverse().toString());
+    }
+
+    private static String[] sentences(String text) {
+        return text.split("[!.?]\\s*");
     }
 }
