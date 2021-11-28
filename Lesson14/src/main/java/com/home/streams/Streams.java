@@ -1,9 +1,12 @@
 package com.home.streams;
 
+
 import java.io.*;
 
 public class Streams {
 
+    private Streams() {
+    }
 
     public static void firstTask(String inputFile, String outputFile) throws IOException {
         FileWriter writer = new FileWriter(outputFile);
@@ -15,9 +18,10 @@ public class Streams {
         write(outputFile, TextFormatter.formatText(read(inputFile)));
     }
 
-    public static void thirdTask(String fileInputName, String fileOutputPath) throws IOException {
-        TextFormatter.checkCensor(read(fileInputName), read(fileOutputPath));
+    public static void thirdTask(String inputFile, String blackList) {
+        TextFormatter.checkCensor(read(inputFile), read(blackList));
     }
+
 
     private static String read(String fileInputName) {
         StringBuilder builder = new StringBuilder();
